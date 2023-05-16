@@ -11,4 +11,7 @@ import { GammaComponent } from './gamma/gamma.component';
 })
 export class AppComponent {
   title = 'First';
+  alerting(){
+    alert("ALERT!")
+  }
 }

@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./alpha.component.css']
 })
 export class AlphaComponent {
+  i: number = 0;
 
+  inc(){
+    this.i++
+  }
+  dec(){
+    this.i--
+  }
 }

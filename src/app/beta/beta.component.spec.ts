@@ -1,21 +1,95 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+body{
+  background-color: rgb(0, 0, 30);
+  color: white;
+}
 
-import { BetaComponent } from './beta.component';
 
-describe('BetaComponent', () => {
-  let component: BetaComponent;
-  let fixture: ComponentFixture<BetaComponent>;
+.intro{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 10px;
+  background-color: darkgray;
+  color: rgb(70, 0, 20);
+  text-shadow: black;
+}
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [BetaComponent]
-    });
-    fixture = TestBed.createComponent(BetaComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+.blah{
+  font-size:120%;
+}
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+.container{
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.clicker{
+
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: auto;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  touch-action: manipulation;
+}
+
+.input-area-fields{
+  width: 50px;
+  margin: 0px 10px 30px 10px;
+}
+
+#output{
+  text-align: center;
+  font-weight: 900;
+}
+
+#plus{
+  color: white;
+  background-color: #2d6322;
+}
+
+#minus{
+  color: white;
+  background-color: #1c4f63;
+}
+
+#mul{
+  color: white;
+  background-color: #74551c;
+}
+
+#div{
+  color: white;
+  background-color: #3e0f4d;
+}
+
+#mod{
+  color: white;
+  background-color: #742e55;
+}
+
+#pow{
+  color: white;
+  background-color: #7a0404;
+}
