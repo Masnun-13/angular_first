@@ -16,18 +16,22 @@
       <div class="listcontainer">
           <h1 class="intro">Shopping List</h1>
           <div class="input">
-              <input type="text" id="item" value="Item to add">
+              <input type="text" id="item" [value]="initem" [(ngModel)]="initem">
               <br>
-              <button class="clicker" id="additem">Add Item</button>
+              <button class="clicker" id="additem" (click)="addItem()">Add Item</button>
           </div>
           <br>
           <div class="stuff">
-              <ul id="stufflist">
-              </ul>
+            <ul class="hand" *ngFor="let item of items" >
+              <li>
+                <label>{{item}}</label>
+                <input type="checkbox">
+              </li>
+            </ul>
           </div>
       </div>
       <div class="delete">
-          <button class="clicker" id="deletebutton">Delete checked items</button>
+          <button class="clicker" id="deletebutton" (click)="kill()">Delete checked items</button>
       </div>
 
     </body>

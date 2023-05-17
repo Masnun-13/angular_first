@@ -11,7 +11,7 @@ export class DeltaComponent {
   x : number = 0
   hand : number = 0
   lighttext : String = ""
-  color : String = "#FFFFFF"
+  color : String = "#000000"
   disabl : boolean = false
 
   constructor(){

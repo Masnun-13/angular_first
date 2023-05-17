@@ -16,27 +16,27 @@
       <div class="container">
           <div class="win-loss-area">
               <label for="win">Wins</label>
-              <input type="number" id="win" class="win-loss-area-fields" value="0" disabled="true">
+              <input type="number" id="win" class="win-loss-area-fields" [value]="win" disabled="true">
               <label for="los">Losses</label>
-              <input type="number" id="los" class="win-loss-area-fields" value="0" disabled="true">
+              <input type="number" id="los" class="win-loss-area-fields" [value]="loss" disabled="true">
           </div>
           <div class="clicker">
-              <button id="rockbutt">Rock</button>
-              <button id="scisbutt">Scissors</button>
-              <button id="papbutt">Paper</button>
+              <button id="rockbutt" (click)="rock()">Rock</button>
+              <button id="scisbutt" (click)="scissor()">Scissors</button>
+              <button id="papbutt" (click)="paper()">Paper</button>
           </div>
           <br>
           <br>
           <div class="arena">
               <label for="you">You picked</label>
-              <input type="text" id="you" class="arena-fields" disabled="true">
+              <input type="text" id="you" class="arena-fields" [value]="player" disabled="true">
               <label for="pc">Computer picked</label>
-              <input type="text" id="pc" class="arena-fields" disabled="true">
+              <input type="text" id="pc" class="arena-fields" [value]="pc" disabled="true">
               <br>
               <img src="assets/images/p1.png" id="p1" alt="">
-              <img [src]="playerpic" [(ngModel)]="playerpic" alt="">
-              <button id="light"></button>
-              <img [src]="pcpic" [(ngModel)]="pcpic" alt="">
+              <img [src]="playerpic" alt="">
+              <button id="light" [innerHTML]="lighttext" [style.background]="color"></button>
+              <img [src]="pcpic" alt="">
               <img src="assets/images/pc1.png" id="pc1" alt="">
           </div>
       </div>
