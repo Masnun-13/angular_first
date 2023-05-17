@@ -16,27 +16,27 @@
       <div class="container">
           <div class="input-area">
               <label for="input1">Input 1</label>
-              <input type="number" id="input1" class="input-area-fields" value="0">
+              <input type="number" id="input1" class="input-area-fields" [value]="val1" [(ngModel)]="val1">
               <label for="input2">Input 2</label>
-              <input type="number" id="input2" class="input-area-fields" value="0">
+              <input type="number" id="input2" class="input-area-fields" [value]="val2" [(ngModel)]="val2">
           </div>
           <div class="clicker">
-              <button id="plus">Add</button>
-              <button id="minus">Subtract</button>
+              <button id="plus" (click)="add()">Add</button>
+              <button id="minus" (click)="sub()">Subtract</button>
               <br>
               <br>
-              <button id="mul">Multiply</button>
-              <button id="div">Divide</button>
+              <button id="mul" (click)="mul()">Multiply</button>
+              <button id="div" (click)="div()">Divide</button>
               <br>
               <br>
-              <button id="mod">Modulo</button>
-              <button id="pow">Exponent</button>
+              <button id="mod" (click)="mod()">Modulo</button>
+              <button id="pow" (click)="pow()">Exponent</button>
           </div>
           <br>
           <br>
           <br>
           <div class="output-area">
-              <input type="text" id="output" value="Result" disabled="true">
+              <input type="text" id="output" [value]="res" [(ngModel)]="res" disabled="true">
           </div>
       </div>
     </body>
