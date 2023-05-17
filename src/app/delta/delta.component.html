@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Day3</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./delta.component.css">
+    </head>
+    <body>
+      <h1 class="intro">Component 4: Blackjack App</h1>
+      <br>
+      <br>
+      <div class="gamecontainer">
+          <div class="hand" *ngFor="let image of images" >
+              <img [src]='image'/>
+            </div>
+          <br>
+          <br>
+          <div class="clicker">
+              <button id="draw" (click)="drawCard()" [disabled]="disabl">Draw Card</button>
+          </div>
+          <br>
+          <br>
+          <button id="light" [innerHTML]="lighttext" [style.background]="color"></button>
+      </div>
+    </body>
+</html>

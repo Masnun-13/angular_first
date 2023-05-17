@@ -28,7 +28,11 @@
               "./src/app/app.component.css",
               "./src/app/alpha/alpha.component.css",
               "./src/app/beta/beta.component.css",
-              "./src/app/gamma/gamma.component.css"
+              "./src/app/gamma/gamma.component.css",
+              "./src/app/delta/delta.component.css",
+              "./src/app/epsilon/epsilon.component.css",
+              "./src/app/zeta/zeta.component.css",
+              "./src/app/eta/eta.component.css"
             ],
             "scripts": []
           },
