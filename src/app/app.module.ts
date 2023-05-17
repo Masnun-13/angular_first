@@ -7,6 +7,8 @@ import { AlphaComponent } from './alpha/alpha.component';
 import { BetaComponent } from './beta/beta.component';
 import { GammaComponent } from './gamma/gamma.component';
 
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { GammaComponent } from './gamma/gamma.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

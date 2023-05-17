@@ -55,17 +55,32 @@ body{
 
 #clicker1{
   color: #FFFFFF;
-  background-color: #a71fa7;
+  background-color: #4b044b;
+}
+
+#clicker1:hover{
+  color: #FFFFFF;
+  background-color: #8d0b8d;
 }
 
 #clicker2{
-  color: #000000;
-  background-color: #9adaf3;
+  color: #FFFFFF;
+  background-color: #004966;
+}
+
+#clicker2:hover{
+  color: #FFFFFF;
+  background-color: #02729e;
 }
 
 #clicker3{
-  color: #000000;
-  background-color: #eaff8b;
+  color: #FFFFFF;
+  background-color: #724f03;
+}
+
+#clicker3:hover{
+  color: #FFFFFF;
+  background-color: #ac7707;
 }
 
 #counter{
@@ -85,12 +100,27 @@ body{
   background-color: #357528;
 }
 
+#clicker4:hover{
+  color: white;
+  background-color: #469c34;
+}
+
 #clicker5{
   color: white;
   background-color: #8a0505;
 }
 
+#clicker5:hover{
+  color: white;
+  background-color: #bb0202;
+}
+
 #clicker6{
   color: white;
   background-color: black;
+}
+
+#clicker6:hover{
+  color: white;
+  background-color: rgb(46, 45, 45);
 }

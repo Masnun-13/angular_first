@@ -17,18 +17,18 @@
         <div class="container">
             <button class="clicker" id="clicker2" (click)="inc()">Increment</button>
             <button class="clicker" id="clicker3" (click)="dec()">Decrement</button>
-            <h2 id="counter">{{i}}</h2>
+            <h2 id="counter" [innerHTML]="i" [(ngModel)]="i"></h2>
             <label for="value">Value to Increment/Decrement: </label>
-            <span id="value">1</span>
+            <span id="value" [innerHTML]="j" [(ngModel)]="j"></span>
             <br>
             <br>
             <br>
-            <button class="clicker" id="clicker4">Save</button>
-            <button class="clicker" id="clicker1">Load</button>
+            <button class="clicker" id="clicker4" (click)="save()">Save</button>
+            <button class="clicker" id="clicker1" (click)="load()"> Load</button>
             <br>
             <br>
-            <button class="clicker" id="clicker6">Change Amount</button>
-            <button class="clicker" id="clicker5">Reset</button>
+            <button class="clicker" id="clicker6" (click)="amount()">Change Amount</button>
+            <button class="clicker" id="clicker5" (click)="reset()">Reset</button>
         </div>
 
         <!-- <script src="script.js" async defer></script> -->
