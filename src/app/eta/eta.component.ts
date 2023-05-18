@@ -23,9 +23,7 @@ export class EtaComponent {
   addBook(){
     let boop = new Book(this.name, this.price, this.auth, this.year)
     this.books.push(boop)
-    console.log(this.name)
     localStorage.setItem(""+this.bookcount, JSON.stringify(boop))
-    console.log(this.books[this.bookcount-1])
     this.bookcount++
   }
 
