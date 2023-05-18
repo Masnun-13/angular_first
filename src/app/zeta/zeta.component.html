@@ -10,37 +10,40 @@
         <link rel="stylesheet" href="./zeta.component.css">
     </head>
     <body>
+      <h1 class="intro">Component 6: Simple Math Quiz App</h1>
+      <br>
+      <br>
         <div class="container">
             <div class="question">
                 <h2>What is</h2>
-                <button class="clicker" id="num1">0</button>
-                <button class="clicker" id="op">+</button>
-                <button class="clicker" id="num2">1</button>
+                <button class="clicker" id="num1">{{val1}}</button>
+                <button class="clicker" id="op">{{opera}}</button>
+                <button class="clicker" id="num2">{{val2}}</button>
             </div>
             <br>
             <div class="input">
-                <input type="number" id="myAns">
-                <button class="clicker" id="check">Submit</button>
+                <input type="number" id="myAns" [value]="myans" [(ngModel)]="myans">
+                <button class="clicker" id="check" [disabled]="over" (click)="answer()">Submit</button>
             </div>
             <br>
             <br>
             <div class="result">
                 <label for="you">Your answer</label>
-                <input type="text" id="you" class="arena-fields" disabled="true">
+                <input type="text" id="you" class="arena-fields" disabled="true" [value]="myans">
                 <label for="pc">Correct answer</label>
-                <input type="text" id="pc" class="arena-fields" disabled="true">
+                <input type="text" id="pc" class="arena-fields" disabled="true" [value]="correctans">
                 <br>
-                <button id="light"></button>
+                <button id="light" [innerHTML]="lighttext" [style.background]="color"></button>
             </div>
             <br>
             <div class="win-loss-area">
                 <label for="win">Wins</label>
-                <input type="number" id="win" class="win-loss-area-fields" value="0" disabled="true">
+                <input type="number" id="win" class="win-loss-area-fields" [value]="wins" disabled="true">
                 <label for="los">Losses</label>
-                <input type="number" id="los" class="win-loss-area-fields" value="0" disabled="true">
+                <input type="number" id="los" class="win-loss-area-fields" [value]="losses" disabled="true">
             </div>
             <br>
-            <button class="clicker" onclick="reset()">Reset</button>
+            <button class="clicker" (click)="again()">Reset</button>
         </div>
 
         <script src="script.js" async defer></script>

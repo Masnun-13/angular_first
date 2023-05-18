@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { listitem } from './item';
 @Component({
   selector: 'app-epsilon',
   templateUrl: './epsilon.component.html',
@@ -7,14 +7,26 @@ import { Component } from '@angular/core';
 })
 export class EpsilonComponent {
   initem : String = "Add an item"
-  items : Array<String> = []
-  check: boolean = false
-  addItem(){
-    this.items.push(this.initem)
-  }
-  kill(){
-    for(let item in this.items){
+  items : Array<listitem> = []
 
+  addItem(){
+    this.items.push(new listitem(this.initem, false))
+  }
+
+  kill(){
+    let killarray : Array<number> = []
+    let i = 0
+    for(let item of this.items){
+    if(item.tick==true)
+      {
+        killarray.push(i)
+      }
+      i++
+    }
+    console.log(killarray)
+    for(let j=killarray.length-1; j>=0; j--)
+    {
+      this.items.splice(killarray[j], 1)
     }
   }
 }

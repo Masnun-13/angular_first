@@ -24,8 +24,8 @@
           <div class="stuff">
             <ul class="hand" *ngFor="let item of items" >
               <li>
-                <label>{{item}}</label>
-                <input type="checkbox">
+                <label>{{item.itemtext}}</label>
+                <input type="checkbox" [checked]="item.tick" [(ngModel)]="item.tick">
               </li>
             </ul>
           </div>

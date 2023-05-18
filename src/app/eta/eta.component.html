@@ -17,33 +17,38 @@
             <div id="product-area">
                 <table class="product-table" id="prodtab">
                     <thead>
-                        <th>Book Name</th>
-                        <th>Book Price</th>
-                        <th>Author Name</th>
-                        <th>Publishing Date</th>
+                      <th>Book Name</th>
+                      <th>Book Price ($)</th>
+                      <th>Author Name</th>
+                      <th>Publishing Year</th>
                     </thead>
+                    <tbody *ngFor="let book of books">
+                      <tr>
+                        <td>{{book.name}}</td>
+                        <td>{{book.price}}</td>
+                        <td>{{book.auth}}</td>
+                        <td>{{book.year}}</td>
+                      </tr>
+                    </tbody>
                 </table>
-                <button class="clicker" id="deletebutt">Delete All Books</button>
+                <button class="clicker" id="deletebutt" (click)="burnBooks()">Delete All Books</button>
             </div>
             <br>
             <br>
             <div class="input">
-                <h2 class="libh2">Add Book:</h2>
-                <form class="input" id="inputForm">
-                    <label class="input-box" for="bookName">Book Name</label>
-                    <input class="input-box" type="text" id="bookName">
-                    <br>
-                    <label class="input-box" for="bookPrice">Price ($)</label>
-                    <input class="input-box" type="number" id="bookPrice">
-                    <br>
-                    <label class="input-box" for="authName">Author Name</label>
-                    <input class="input-box" type="text" id="authName">
-                    <br>
-                    <label class="input-box" for="bookDate">Publishing Date</label>
-                    <input class="input-box" type="text" id="bookDate">
-                    <br>
-                    <button class="clicker" id="subbutt">Submit</button>
-                </form>
+              <label for="name">Book Name</label>
+              <input type="text" id="name" [value]="name" [(ngModel)]="name">
+              <br>
+              <label for="price">Book Price ($)</label>
+              <input type="text" id="price" [value]="price" [(ngModel)]="price">
+              <br>
+              <label for="auth">Author Name</label>
+              <input type="text" id="auth" [value]="auth" [(ngModel)]="auth">
+              <br>
+              <label for="year">Publishing Year</label>
+              <input type="text" id="year" [value]="year" [(ngModel)]="year">
+              <br>
+              <button class="clicker" id="additem" (click)="addBook()">Add Item</button>
             </div>
             <br>
         </div>
